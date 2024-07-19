@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rantify</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+        }
+            
+        .banner {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(images/rantify\ intro.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        .navbar {
+            width: 85%;
+            margin: auto;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        
+        .logo {
+            width: 100px; /* Adjusted width */
+            height: 100px; /* Adjusted height */
+            border-radius: 50%; /* Creates a circular shape */
+            overflow: hidden; /* Ensures content doesn't overflow */
+        }
+        
+        .logo img {
+            width: 100%; /* Ensures the image fills the circular container */
+            height: auto; /* Maintains aspect ratio */
+            display: block; /* Removes any default inline styles */
+        }
+        
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .navbar a::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: lightseagreen;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: width 0.3s ease;
+        }
+        
+        .navbar a:hover::after {
+            width: 100%;
+        }
+        
+
+        .algorithmContent {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%; /* Centering vertically */
+            left: 0;
+            transform: translateY(-50%); /* Centering vertically */
+            color: #fff;
+            animation: fadeIn 2s ease;
+            text-align: center; /* Centering text */
+        }
+        .algorithmContent h1 {
+            font-size: 70px;
+            
+        }
+        
+        
+       
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        @keyframes slideIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes textColorChange {
+            0% { color: white; }
+            100% { color: lightseagreen; }
+        }
+
+        .about-purpose {
+            display: flex;
+            padding: 40px 20px;
+            background-color: white;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-purpose .image-container, .about-purpose .content {
+            flex: 1;
+        }
+        
+        .about-purpose .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .about-purpose .image-container img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 8px;
+            animation: slideIn 1s ease-out;
+        }
+        
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+        
+        .about-purpose .content {
+            padding-left: 20px;
+        }
+        
+        .about-purpose .content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            flex-wrap: wrap;
+        }
+        
+        footer .contact, footer .inquiry, footer .social-media {
+            flex: 1;
+            margin: 10px;
+        }
+        
+        footer .social-media {
+            text-align: center;
+        }
+        
+        footer .social-media ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            padding: 0;
+        }
+        
+        footer .social-media ul li {
+            display: inline;
+        }
+        
+        footer .social-media ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer .social-media ul li a img {
+            width: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        footer .social-media ul li a:hover img {
+            transform: scale(1.2);
+        }
+        
+        footer .inquiry {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="images/rantify logo.jpg" class="logo">
+            <ul>
+                <li><a href="rantify.html">Homepage</a></li>
+                <li><a href="bigonotation.html">ChatBox</a></li>
+                <li><a href="algorithm.html">Logout</a></li>
+            </ul>
+        </div>
+        <div class="algorithmContent">
+            <h1>Welcome to Rantify</h1>
+        </div>
+    </div>
+    <section class="about-purpose">
+        <div class="image-container">
+            <img src="images/rantify image.jpg" alt="Website Image">
+        </div>
+        <div class="content">
+            <h2>About the Website</h2>
+            <p>Welcome to Rantify! Our website is designed to provide a platform where users can share their thoughts, ideas, and opinions on various topics. We believe in the power of free speech and the importance of having a space where everyone can express themselves openly and respectfully.</p>
+            <h2>Purpose or the Content follow by the About...</h2>
+            <p>At Rantify, our goal is to create a community where people can connect, debate, and learn from each other. Whether you are passionate about technology, politics, health, or any other topic, you will find like-minded individuals here to engage with. We encourage meaningful discussions and the sharing of diverse perspectives.</p>
+        </div>
+    </section>
+    <footer>
+        <div class="contact">
+            <h2>Contact:</h2>
+            <p>Name: John Doe</p>
+            <p>Email: john.doe@example.com</p>
+            <p>Phone Number: 123-456-7890</p>
+        </div>
+        <div class="inquiry">
+            <h2>About us for further Enquiry</h2>
+            <p>Email: rantify@gmail.com</p>
+            <p>Phone Number: 9876543210</p>
+        </div>
+        <div class="social-media">
+            <h2>Follow Us</h2>
+            <ul>
+                <li><a href="#"><img src="images/facebook_icon.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="images/twitter_icon.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="images/instagram_icon.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const aboutPurposeSection = document.querySelector('.about-purpose');
+            window.addEventListener('scroll', () => {
+                const rect = aboutPurposeSection.getBoundingClientRect();
+                if (rect.top <= window.innerHeight) {
+                    aboutPurposeSection.style.animation = 'fadeIn 1s ease-in-out';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
