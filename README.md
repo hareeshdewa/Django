@@ -1,1 +1,1 @@
-The above File represent a personal project that is completely based on Django which takes the action using Python
+The file above represents a personal project based on Django, which uses Python. It is still in progress.
