@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox Page</title>
+    <link rel="stylesheet" href="{% static 'css/chatbox.css' %}">
+    <link rel="stylesheet" href="{%static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'%}">
+</head>
+<body>
+    <div id="chatbox-container">
+        <div id="chatbox">
+            <div id="chatbox-header">
+                <h2>Chat with Us</h2>
+                <button id="call-button"><i class="fas fa-phone"></i> Schedule Call</button>
+            </div>
+            <div id="chatbox-messages"></div>
+            <div id="chatbox-input">
+                <input type="text" id="message-input" placeholder="Type a message...">
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="schedule-call-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Schedule a Call</h2>
+            <div class="schedule-input-group">
+                <label for="call-date">Select a date:</label>
+                <input type="date" id="call-date">
+            </div>
+            <div class="schedule-input-group">
+                <label for="call-time">Select a time:</label>
+                <input type="time" id="call-time">
+            </div>
+            <button id="schedule-call-button">Schedule</button>
+        </div>
+    </div>
+   
+    <script src="{% static 'js/chatbox.js' %}"></script>
+</body>
+</html>

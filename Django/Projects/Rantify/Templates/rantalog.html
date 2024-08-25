@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Selector</title>
+ 
+    <link rel="stylesheet" href="{% static ../css/rantalog.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="photo-gallery">
+            <img src="{% static 'images/photo1.jpg' %}" alt="Photo 1" class="photo" onclick="selectPhoto(this)">
+            <img src="{% static 'images/photo2.jpg' %}" alt="Photo 2" class="photo" onclick="selectPhoto(this)">
+            <img src="{% static 'images/photo3.jpg' %}" alt="Photo 3" class="photo" onclick="selectPhoto(this)">
+            <!-- Add more photos as needed -->
+        </div>
+        <div class="button-group">
+            <button class="chatbox-button" onclick="chat()" disabled>Chatbox</button>
+            <button class="call-button" onclick="call()" disabled>Call</button>
+        </div>
+    </div>
+
+    <script src="{% static 'rantalog.js' %}"></script>
+</body>
+</html>
